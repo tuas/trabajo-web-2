@@ -2,12 +2,11 @@
 class tallerView
 {
   private $smarty;
-  private $cargar;
+  //private $cargar;
 
   function __construct()
   {
     $this->smarty = new Smarty();
-    $this->carga = new Smarty();
   }
 
   function mostrar($taller){
@@ -15,7 +14,8 @@ class tallerView
     $this->smarty->display('templates/home.tpl');
   }
   function actualizar($action){
-    $this->smarty->assign("carga","templates/".$action.".tpl");
+    //$this->smarty->assign("info","templates/".$action.".tpl");
+    $this->smarty->display("templates/".$action.".tpl");
   }
 }
 

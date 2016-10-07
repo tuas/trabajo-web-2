@@ -7,7 +7,7 @@ class tallermodelo
     $this->taller =['1'];
   }
 
-  function getTareas(){
+  function getTaller(){
     return $this->taller;
   }
 }

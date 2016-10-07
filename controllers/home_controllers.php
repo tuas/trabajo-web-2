@@ -1,7 +1,7 @@
 <?php
 include_once('views/vistataller.php');
 include_once('models/basededatos.php');
-class TareasController
+class TallerController
 {
   private $vista;
   private $modelo;
@@ -10,16 +10,29 @@ class TareasController
     $this->modelo = new tallermodelo();
     $this->vista = new tallerView();
   }
-  function iniciar($pagina){
-      $taller = $this->modelo->getTareas();
-      $this->vista->mostrar($taller);
-     $this->vista->actualizar($pagina);
+  function home($pagina)
+  {
+    $taller = $this->modelo->getTaller();
+    $this->vista->mostrar($taller);
+  }
+function iniciar($pagina){
+      $taller = $this->modelo->getTaller();
+      $this->vista->actualizar($pagina);
       }
-      function galeria($pagina){
-        //  $taller = $this->modelo->getTareas();
-          $this->vista->actualizar($pagina);
+function galeria($pagina){
+      $taller = $this->modelo->getTaller();
+      $this->vista->actualizar($pagina);
 
         }
+function servicio($pagina){
+      $taller = $this->modelo->getTaller();
+      $this->vista->actualizar($pagina);
+              }
+function turno($pagina){
+      $taller = $this->modelo->getTaller();
+      $this->vista->actualizar($pagina);
+                    }
+
 
 
 

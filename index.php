@@ -4,12 +4,12 @@ require_once('libs/smarty.class.php');
 require_once('config/ConfigApp.php');
 
 
-$controller = new TareasController();
+$controller = new TallerController();
 if (!array_key_exists(ConfigApp::$ACTION,$_REQUEST)){
-  $controller->iniciar('inicio');
+  $controller->home('home');
   die();
 }
-
+else {
 switch ($_REQUEST[ConfigApp::$ACTION]) {
   case ConfigApp::$GALERIA:
     $controller->galeria('galeria');
@@ -17,16 +17,15 @@ switch ($_REQUEST[ConfigApp::$ACTION]) {
   case ConfigApp::$SERVICIOS:
     $controller->servicio('servicios');
     break;
-  case ConfigApp::$FORMULARIO:
-    $controller->formulario('turno');
+  case ConfigApp::$TURNO:
+    $controller->turno('turno');
     break;
   case ConfigApp::$INICIO:
     $controller->iniciar('inicio');
     break;
   default:
-    $controller->iniciar('inicio');
+    echo "error";
     break;
 }
-?>
-
+}
 ?>

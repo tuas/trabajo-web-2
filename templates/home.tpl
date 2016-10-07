@@ -23,16 +23,16 @@
         <span class="icon-bar"></span>
       </button>
 
-      <a id="inicio" class="navbar-brand" href="#"> <span class="glyphicon glyphicon-home" aria-hidden="true"> Inicio</span></a>
+      <a id="ini" class="navbar-brand" href="#" data-idinicio="{$inicio['id_inicio']}"> <span class="glyphicon glyphicon-home" aria-hidden="true"> Inicio</span></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <ul class="nav navbar-nav">
-        <li><a id="gal" href="#"><span class="glyphicon glyphicon-picture" aria-hidden="true"> Galeria</span> </a></li>
-        <li><a id="serv" href="#"><span class="glyphicon glyphicon-list" aria-hidden="true"> Servicios recomendados</span></a></li>
-        <li><a id="turn" href="#"><span class="glyphicon glyphicon-calendar" aria-hidden="true"> Turnos</span></a></li>
+        <li><a id="gal" href="#" data-idgaleria="{$galeria['id_galeria']}"><span class="glyphicon glyphicon-picture" aria-hidden="true"> Galeria</span> </a></li>
+        <li><a id="serv" href="#" data-idservicios="{$servicios['id_servicios']}"><span class="glyphicon glyphicon-list" aria-hidden="true"> Servicios recomendados</span></a></li>
+        <li><a id="turn" href="#" data-idturno="{$turno['id_turno']}"><span class="glyphicon glyphicon-calendar" aria-hidden="true"> Turnos</span></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -41,7 +41,7 @@
 <div class="row">
   <div class="col-sm-9">
 
-    <article id="contenido">{$carga}</article>
+    <article id="contenido">{include file='inicio.tpl'}</article>
   </div>
   <div class="col-sm-3 hidden-xs">
     <aside class="propagandas">
