@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-10-07 18:35:25
+/* Smarty version 3.1.30, created on 2016-10-11 02:01:20
   from "C:\xampp\htdocs\trabajo web\templates\inicio.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_57f7cecd499b84_60019528',
+  'unifunc' => 'content_57fc2bd0ba9921_83586174',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_57f7cecd499b84_60019528 (Smarty_Internal_Template $_smarty_tpl) {
+function content_57fc2bd0ba9921_83586174 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="descripcion">
 <p>Nuestra empresa cuenta con más de 30 años de experiencia y contamos con dos generaciones de chapistas. Somos conocidos en la provincia de Buenos Aires gracias algunas restauraciones de autos antiguos. Nos dedicamos a la reparación y arreglo de todo tipo de vehículo, marca y modelo, estamos especializados en:</p>

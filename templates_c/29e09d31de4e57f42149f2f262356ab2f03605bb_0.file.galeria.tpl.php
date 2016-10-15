@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-10-07 18:35:24
+/* Smarty version 3.1.30, created on 2016-10-12 23:03:40
   from "C:\xampp\htdocs\trabajo web\templates\galeria.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_57f7cecc2f3990_82802422',
+  'unifunc' => 'content_57fea52cadf617_75140213',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '29e09d31de4e57f42149f2f262356ab2f03605bb' => 
     array (
       0 => 'C:\\xampp\\htdocs\\trabajo web\\templates\\galeria.tpl',
-      1 => 1475804150,
+      1 => 1476111090,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_57f7cecc2f3990_82802422 (Smarty_Internal_Template $_smarty_tpl) {
+function content_57fea52cadf617_75140213 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="galeria">
 <h2>Galeria de arreglos realizados</h2>
@@ -44,73 +44,73 @@ function content_57f7cecc2f3990_82802422 (Smarty_Internal_Template $_smarty_tpl)
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <img src="img/imagenes/auto1.jpg" alt="foto arreglo auto"/>
+      <img src="images/img/imagenes/auto1.jpg" alt="foto arreglo auto"/>
       <div class="carousel-caption">
         <h3>ARREGLO FRENTE</h3>
       </div>
     </div>
     <div class="item">
-      <img src="img/imagenes/auto2.jpg" alt="foto arreglo auto"/>
+      <img src="images/img/imagenes/auto2.jpg" alt="foto arreglo auto"/>
       <div class="carousel-caption">
       	<h3> ARREGLO SOCALO</h3>
       </div>
     </div>
     <div class="item">
-      <img src="img/imagenes/auto3.jpg" alt="foto arreglo auto"/>
+      <img src="images/img/imagenes/auto3.jpg" alt="foto arreglo auto"/>
       <div class="carousel-caption">
       	<h3>ARREGLO GUARDABARROS TRASERO</h3>
       </div>
     </div>
     <div class="item">
-      <img src="img/imagenes/auto4.jpg" alt="foto arreglo auto"/>
+      <img src="images/img/imagenes/auto4.jpg" alt="foto arreglo auto"/>
       <div class="carousel-caption">
       	<h3>RESTAURACION TOTAL</h3>
       </div>
     </div>
     <div class="item">
-      <img src="img/imagenes/auto5.jpg" alt="foto arreglo auto"/>
+      <img src="images/img/imagenes/auto5.jpg" alt="foto arreglo auto"/>
       <div class="carousel-caption">
       	<h3>ARREGLO BAUL</h3>
       </div>
     </div>
     <div class="item">
-      <img src="img/imagenes/auto6.jpg" alt="foto arreglo auto"/>
+      <img src="images/img/imagenes/auto6.jpg" alt="foto arreglo auto"/>
       <div class="carousel-caption">
       	<h3>ARREGLO PUERTAS</h3>
       </div>
     </div>
     <div class="item">
-      <img src="img/imagenes/auto7.jpg" alt="foto arreglo auto"/>
+      <img src="images/img/imagenes/auto7.jpg" alt="foto arreglo auto"/>
       <div class="carousel-caption">
       	<h3>ARREGLO FRENTE</h3>
       </div>
     </div>
     <div class="item">
-      <img src="img/imagenes/auto8.jpg" alt="foto arreglo auto"/>
+      <img src="images/img/imagenes/auto8.jpg" alt="foto arreglo auto"/>
       <div class="carousel-caption">
       	<h3>ARREGLO Y REFORMA BAUL</h3>
       </div>
     </div>
     <div class="item">
-      <img src="img/imagenes/auto9.jpg" alt="foto arreglo auto"/>
+      <img src="images/img/imagenes/auto9.jpg" alt="foto arreglo auto"/>
       <div class="carousel-caption">
       	<h3>ARREGLO GUARDABARROS TRASERO</h3>
       </div>
     </div>
     <div class="item">
-      <img src="img/imagenes/auto10.jpg" alt="foto arreglo auto"/>
+      <img src="images/img/imagenes/auto10.jpg" alt="foto arreglo auto"/>
       <div class="carousel-caption">
       	<h3>ARREGLO FRENTE Y PUERTAS</h3>
       </div>
     </div>
     <div class="item">
-      <img src="img/imagenes/auto11.jpg" alt="foto arreglo auto"/>
+      <img src="images/img/imagenes/auto11.jpg" alt="foto arreglo auto"/>
       <div class="carousel-caption">
       	<h3>ARREGLO SOCALO</h3>
       </div>
     </div>
     <div class="item">
-      <img src="img/imagenes/auto12.jpg" alt="foto arreglo auto"/>
+      <img src="images/img/imagenes/auto12.jpg" alt="foto arreglo auto"/>
       <div class="carousel-caption">
       	<h3>ARREGLO PUERTA BAUL</h3>
       </div>

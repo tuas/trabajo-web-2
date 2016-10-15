@@ -12,27 +12,26 @@ class TallerController
   }
   function home($pagina)
   {
-    $taller = $this->modelo->getTaller();
-    $this->vista->mostrar($taller);
+    $this->vista->mostrar($pagina);
   }
 function iniciar($pagina){
-      $taller = $this->modelo->getTaller();
       $this->vista->actualizar($pagina);
       }
 function galeria($pagina){
-      $taller = $this->modelo->getTaller();
       $this->vista->actualizar($pagina);
-
         }
 function servicio($pagina){
-      $taller = $this->modelo->getTaller();
       $this->vista->actualizar($pagina);
               }
 function turno($pagina){
-      $taller = $this->modelo->getTaller();
       $this->vista->actualizar($pagina);
                     }
-
+function mostrarturno(){
+  $key = $_GET['Fecha'];
+  $this->modelo->eliminarTarea($key);
+  $tareas = $this->modelo->getTareas();
+  $this->vista->getLista($tareas);
+                    }
 
 
 

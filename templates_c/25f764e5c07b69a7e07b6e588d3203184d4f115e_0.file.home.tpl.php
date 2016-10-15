@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-10-07 21:50:40
+/* Smarty version 3.1.30, created on 2016-10-11 02:01:20
   from "C:\xampp\htdocs\trabajo web\templates\home.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_57f7fc9086aff5_32642120',
+  'unifunc' => 'content_57fc2bd0b67294_64277614',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '25f764e5c07b69a7e07b6e588d3203184d4f115e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\trabajo web\\templates\\home.tpl',
-      1 => 1475869839,
+      1 => 1476111556,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:inicio.tpl' => 1,
   ),
 ),false)) {
-function content_57f7fc9086aff5_32642120 (Smarty_Internal_Template $_smarty_tpl) {
+function content_57fc2bd0b67294_64277614 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -33,7 +33,6 @@ function content_57f7fc9086aff5_32642120 (Smarty_Internal_Template $_smarty_tpl)
     <?php echo '<script'; ?>
  src="varios/js/jquery.js"><?php echo '</script'; ?>
 >
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
   <body>
  <nav class="navbar navbar-inverse" role="navigation">

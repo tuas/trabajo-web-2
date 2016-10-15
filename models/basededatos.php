@@ -1,14 +1,19 @@
 <?php
 class tallermodelo
 {
-  private $taller;
+  private $turno;
+  private $db;
   function __construct()
   {
-    $this->taller =['1'];
+    $this->turno =[''];
+    $this->db = new PDO('mysql:host=localhost;dbname=taller chapista;charset=utf8', 'root', '');
   }
 
-  function getTaller(){
-    return $this->taller;
+
+  function getTarea($Fecha){
+    $posible = $this->db->prepare( "select * from tarea where Fecha=?");
+    $posible->execute(array($Fecha));
+    return $posible->fetch(PDO::FETCH_ASSOC);
   }
 }
  ?>

@@ -1,8 +1,8 @@
 <?php
-function cagofuego()
+function fallo()
 {
-  echo "no te anda pibe";
+  echo "404 pagina no encontrada";
 }
-echo "error";
+
 
  ?>

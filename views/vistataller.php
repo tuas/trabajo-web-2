@@ -17,6 +17,14 @@ class tallerView
     //$this->smarty->assign("info","templates/".$action.".tpl");
     $this->smarty->display("templates/".$action.".tpl");
   }
+  function getLista($turno){
+    $this->smarty->assign('turno',$turno);
+    $this->smarty->display('turno.tpl');
+  }
+  function mostrarhorario($dia){
+    $this->smarty->assign('dia',$dia);
+    $this->smarty->display('horaturno.tpl');
+  }
 }
 
  ?>

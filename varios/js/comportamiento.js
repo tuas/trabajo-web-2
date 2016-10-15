@@ -35,6 +35,14 @@ $('#gal').click(function(){
 	});
 });
 });
+
+$('#diadeseado').click(function(){
+  event.preventDefault();
+    $.get("index.php?action=action_mostrar_turnos", {id_turno: $(this).attr("data-idturno")}, function(data) {
+    $('#diadeseado').val('');
+    $("#horarios").html(data);
+	});
+});
 /*
 var cargarinicio = function() {
   $.ajax({
