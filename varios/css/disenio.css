@@ -26,8 +26,9 @@ footer{
 }
 
 #banner{
+
     width: 100%;
-}
+  }
 
 .cuerpo{
   margin-bottom: 30px;
@@ -41,6 +42,17 @@ footer img{
   margin: 5%;
 }
 
+#logo{  -webkit-animation-name: logo;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration:5s;
+  -webkit-transform-style: preserve-3d;
+}
+@-moz-keyframes logo{
+from { -webkit-transform: rotateY(0deg);    }
+to   { -webkit-transform: rotateY(-360deg); }
+}
+
 footer label{
   margin: 5%;
   display: block;
@@ -49,10 +61,25 @@ footer label{
 .sociales{
   text-align: center;
   margin-top: 15%;
+
 }
 .sociales li{
   text-decoration: none;
   display: inline;
+
+}
+.sociales img{
+    height: 50px;
+    width: 50px;
+    margin: 15px 0;
+    -webkit-transition: all 1s ease;
+
+}
+
+.sociales img:hover {
+    height: 75px;
+    width: 75px;
+    margin-left: -50px;
 }
 
 #contenido{

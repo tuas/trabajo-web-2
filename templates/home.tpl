@@ -53,7 +53,7 @@
 <footer>
   <div class="row">
   <div class="col-sm-3">
-      <img src="images/img/logo.jpg" alt="logo" />
+     <img id="logo" src="img/logo.jpg" alt="logo" />
   </div>
     <div class="col-sm-5">
       <label>Domicilio: Calle 22 Nº520</label>
