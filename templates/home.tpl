@@ -22,19 +22,22 @@
         <span class="icon-bar"></span>
       </button>
 
-      <a id="ini" class="navbar-brand" href="#" data-idinicio="{$inicio['id_inicio']}"> <span class="glyphicon glyphicon-home" aria-hidden="true"> Inicio</span></a>
+      <a id="ini" class="navbar-brand" href="#" > <span class="glyphicon glyphicon-home" aria-hidden="true"> Inicio</span></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <ul class="nav navbar-nav">
-        <li><a id="gal" href="#" data-idgaleria="{$galeria['id_galeria']}"><span class="glyphicon glyphicon-picture" aria-hidden="true"> Galeria</span> </a></li>
-        <li><a id="serv" href="#" data-idservicios="{$servicios['id_servicios']}"><span class="glyphicon glyphicon-list" aria-hidden="true"> Servicios recomendados</span></a></li>
-        <li><a id="turn" href="#" data-idturno="{$turno['id_turno']}"><span class="glyphicon glyphicon-calendar" aria-hidden="true"> Turnos</span></a></li>
+        <li><a id="gal" href="#" ><span class="glyphicon glyphicon-picture" aria-hidden="true"> Galeria</span> </a></li>
+        <li><a id="serv" href="#" ><span class="glyphicon glyphicon-list" aria-hidden="true"> Servicios recomendados</span></a></li>
+        <li><a id="turn" href="#" ><span class="glyphicon glyphicon-calendar" aria-hidden="true"> Turnos</span></a></li>
+        <li id="adm">{include file='login.tpl'}</li>
       </ul>
     </div><!-- /.navbar-collapse -->
+
   </div><!-- /.container-fluid -->
+
 </nav>
 <div class="cuerpo">
 <div class="row">
@@ -53,7 +56,7 @@
 <footer>
   <div class="row">
   <div class="col-sm-3">
-     <img id="logo" src="img/logo.jpg" alt="logo" />
+      <img id="logo" src="images/img/logo.jpg" alt="logo" />
   </div>
     <div class="col-sm-5">
       <label>Domicilio: Calle 22 Nº520</label>

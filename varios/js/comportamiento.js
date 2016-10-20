@@ -1,52 +1,17 @@
-/*$(function(){
-  cargarinicio();
-});*/
+
 $(document).ready(function(){
 
-$('#ini').click(function(){
-  event.preventDefault();
-  var inicio = $("input#INICIO").val();
-    $.get("index.php?action=inicio", {id_inicio: $(this).attr("data-idinicio")}, function(data) {
-    $("#contenido").html(data);
-	});
-});
-
-$('#turn').click(function(){
-  event.preventDefault();
-  var turno = $("input#turno").val();
-    $.get("index.php?action=turno", {id_turno: $(this).attr("data-idturno")}, function(data) {
-    $("#contenido").html(data);
-	});
-});
-
-$('#serv').click(function(){
-  event.preventDefault();
-  var servicios = $("input#servicios").val();
-    $.get("index.php?action=servicios", {id_servicios: $(this).attr("data-idservicios")}, function(data) {
-    $("#contenido").html(data);
-	});
-});
-
-$('#gal').click(function(){
-  event.preventDefault();
-  var galeria = $("input#GALERIA").val();
-    $.get("index.php?action=galeria", {id_galeria: $(this).attr("data-idgaleria")}, function(data) {
-    $("#contenido").html(data);
-	});
-});
-});
-
-$('#diadeseado').click(function(){
-  event.preventDefault();
-    $.get("index.php?action=action_mostrar_turnos", {id_turno: $(this).attr("data-idturno")}, function(data) {
-    $('#diadeseado').val('');
-    $("#horarios").html(data);
-	});
-});
-/*
+  var login = function() {
+   event.preventDefault();
+     $.post( "index.php?action=administrador",$("#login-form").serialize(), function(data) {
+       $('#adm').html(data);
+       $('#username').val('');
+       $('#password').val('');
+     });
+   };
 var cargarinicio = function() {
   $.ajax({
-    url:"templates/inicio.tpl",
+    url:"index.php?action=inicio",
     method:"GET",
     dataType:"html",
     success: function(textoCargado, status){
@@ -56,7 +21,7 @@ var cargarinicio = function() {
 };
 var cargargaleriautos = function() {
   $.ajax({
-    url:"templates/galeria.tpl",
+    url:"index.php?action=galeria",
     method:"GET",
     dataType:"html",
     success: function(textoCargado, status){
@@ -66,7 +31,7 @@ var cargargaleriautos = function() {
 };
 var cargarservicios = function() {
   $.ajax({
-    url:"templates/servicios.tpl",
+    url:"index.php?action=servicios",
     method:"GET",
     dataType:"html",
     success: function(textoCargado, status){
@@ -77,7 +42,7 @@ var cargarservicios = function() {
 
 var cargarturno = function() {
   $.ajax({
-    url:"templates/turno.tpl",
+    url:"index.php?action=turno",
     method:"GET",
     dataType:"html",
     success: function(textoCargado, status){
@@ -86,7 +51,32 @@ var cargarturno = function() {
   });
 };
 
-$(document).on("click", "#inicio", function(){
+var ingresofecha = function() {
+   event.preventDefault();
+   $.post( "index.php?action=mostrar_turnos",$("#forulario").serialize(), function(data) {
+     $('#horarios').html(data);
+     $('#dia').val('');
+   });
+ };
+
+ var agregarturno= function() {
+   event.preventDefault();
+   $.post( "index.php?action=guardar_turno",$("#forulario").serialize(), function(data) {
+     $('#horarios').html(data);
+   });
+ };
+
+ var ocultarform= function() {
+   event.preventDefault();
+    $('#oculto').toggle();
+ };
+
+
+
+ $(document).on("click", "#enviarlogin", function(){
+   login();
+ });
+$(document).on("click", "#ini", function(){
   cargarinicio();
 });
 $(document).on("click", "#gal", function(){
@@ -98,4 +88,14 @@ $(document).on("click", "#serv", function(){
 $(document).on("click", "#turn", function(){
   cargarturno();
 });
-*/
+$(document).on("click", "#btn_enviardia", function(){
+  ingresofecha();
+});
+$(document).on("click", "#btn_agregarturno", function(){
+  agregarturno();
+});
+$(document).on("click", "#administrador", function(){
+  ocultarform();
+});
+
+});

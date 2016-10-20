@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-10-12 23:03:40
+/* Smarty version 3.1.30, created on 2016-10-19 10:32:52
   from "C:\xampp\htdocs\trabajo web\templates\galeria.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_57fea52cadf617_75140213',
+  'unifunc' => 'content_58072fb4c9a268_55639750',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_57fea52cadf617_75140213 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58072fb4c9a268_55639750 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="galeria">
 <h2>Galeria de arreglos realizados</h2>

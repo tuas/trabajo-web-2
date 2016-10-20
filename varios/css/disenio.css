@@ -12,7 +12,10 @@ footer{
   border-radius: 4px;
 }
 
+#predeterminado{
+  display: none;
 
+}
 .descripcion{
   margin: 0px;
   font-size: 20px;
@@ -48,7 +51,9 @@ footer img{
   -webkit-animation-duration:5s;
   -webkit-transform-style: preserve-3d;
 }
-@-moz-keyframes logo{
+
+
+@-webkit-keyframes logo{
 from { -webkit-transform: rotateY(0deg);    }
 to   { -webkit-transform: rotateY(-360deg); }
 }
@@ -71,7 +76,7 @@ footer label{
 .sociales img{
     height: 50px;
     width: 50px;
-    margin: 15px 0;
+    margin: 20px 0;
     -webkit-transition: all 1s ease;
 
 }
@@ -130,4 +135,42 @@ footer label{
 .admin{
    font-size: 20px;
 
+}
+
+
+#oculto{
+  color: black;
+  display: none;
+
+  }
+  #oculto label{
+    color: white;
+    font-family: sans-serif;
+
+    }
+#adm{
+font-size: 15px;
+font-family: sans-serif;
+
+      }
+.selecturno th,td,tr{
+  border: solid white;
+  border-collapse:collapse;
+  color: white;
+  text-align: center;
+
+}
+
+.selecturno td{
+     width:  10%;
+     height: 10%;
+}
+
+.horaturno label, input,table{
+  margin: 5px 0 30px 0;
+
+}
+.horaturno {
+
+  font-size: 20px;
 }

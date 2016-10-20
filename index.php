@@ -1,17 +1,22 @@
 <?php
-require_once('controllers/error_controllers.php');
-require_once('controllers/home_controllers.php');
-require_once('libs/smarty.class.php');
-require_once('config/ConfigApp.php');
+include_once('controllers/error_controllers.php');
+include_once('controllers/home_controllers.php');
+include_once('controllers/turno_controllers.php');
+include_once('libs/smarty.class.php');
+include_once('config/ConfigApp.php');
 
-
+$turnocontroller = new turnoController();
 $controller = new TallerController();
+
 if (!array_key_exists(ConfigApp::$ACTION,$_REQUEST)){
   $controller->home('home');
   die();
 }
-else {
+
 switch ($_REQUEST[ConfigApp::$ACTION]) {
+    case ConfigApp::$ADMINISTRADOR:
+      $turnocontroller->checklogin();
+    break;
     case ConfigApp::$GALERIA:
       $controller->galeria('galeria');
       break;
@@ -25,17 +30,17 @@ switch ($_REQUEST[ConfigApp::$ACTION]) {
       $controller->iniciar('inicio');
       break;
     case ConfigApp::$ACTION_MOSTRAR_TURNOS:
-      $controller->mostrarturno();
+      $turnocontroller->mostrar_turnos();
       break;
     case ConfigApp::$ACTION_GUARDAR_TURNO:
-      $controller->guardarturno();
+      $turnocontroller->guardarturno();
       break;
     case ConfigApp::$ACTION_ELIMINAR_TURNO:
-      $controller->eliminarturno();
+      $turnocontroller->eliminarturno();
       break;
     default:
-      echo "error";
+      $controller->fallo();
       break;
 }
-}
+
 ?>

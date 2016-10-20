@@ -1,89 +1,78 @@
+
+
+
 <form class="form-horizontal">
   <div class="form-group">
         <label class="control-label col-xs-3">Nombre:</label>
         <div class="col-xs-9">
-            <input type="text" class="form-control" id="inputNombre" placeholder="Nombre"></input>
+            <input type="text" class="form-control" name="nombre" placeholder="Nombre"></input>
         </div>
     </div>
     <div class="form-group">
-        <label class="control-label col-xs-3">Apellido:</label>
+        <label class="control-label col-xs-3">Email:</label>
         <div class="col-xs-9">
-            <input type="text" class="form-control" placeholder="Apellido"></input>
+            <input type="email" class="form-control" name="email" placeholder="ejemplo@web.com"></input>
         </div>
     </div>
     <div class="form-group">
-        <label class="control-label col-xs-3">Ciudad:</label>
-        <div class="col-xs-9">
-            <input type="text" class="form-control" id="inputCiudad" placeholder="Ciudad"></input>
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-xs-3">Telefono:</label>
-        <div class="col-xs-9">
-            <input type="tel" class="form-control" placeholder="Telefono"></input>
-        </div>
-    </div>
-
-    <div class="form-group">
-      <label class="control-label col-xs-3">Turno:</label>
-    <div class='col-xs-6'>
-        <label class="control-label col-xs-3">Desde:</label>
-        <div class="form-group">
-            <div class='input-group date' >
-                <input type='text' class="form-control" placeholder="DD/MM/AAAA"/>
-                <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                </span>
-            </div>
-
-    </div>
-
-          <label class="control-label col-xs-3">A:</label>
-        <div class="form-group">
-            <div class='input-group date'>
-                <input type='text' class="form-control" placeholder="DD/MM/AAAA"/>
-                <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                </span>
-            </div>
-        </div>
+      <label class="control-label col-xs-3">Elija horario y tipo de trabaja a realizar para el dia {$fecha}:</label>
+    <div class='col-xs-9'>
+       <table class="selecturno">
+         <thead>
+           <th>Horarios</th>
+           <th>Mecanica</th>
+           <th>Chapa</th>
+           <th>Pintura</th>
+         </thead>
+         <tbody>
+           {foreach from=$turno key=index item=horario}
+              <tr>
+                <td><span>{$horario[0]}</span></td>
+                <td>
+                  {if $horario[1] == 0}
+                  <input type="radio" name="mecanica" value="{$horario[0]}"/>
+                  {else}
+                  <span>Ocupado</span>
+                  {/if}
+                </td>
+                <td>
+                  {if $horario[2] == 0}
+                  <input type="radio" name="chapa" value="{$horario[0]}"/>
+                  {else}
+                  <span>Ocupado</span>
+                  {/if}
+                </td>
+                <td>
+                  {if $horario[3] == 0}
+                  <input type="radio" name="pintura" value="{$horario[0]}"/>
+                  {else}
+                  <span>Ocupado</span>
+                  {/if}
+                </td>
+            </tr>
+          {/foreach}
+          <tr>
+            <td><span>Sin turno</span></td>
+            <td>
+              <input type="radio" name="mecanica" value="0" checked="checked"/>
+            </td>
+            <td>
+              <input type="radio" name="chapa" value="0" checked="checked"/>
+            </td>
+            <td>
+              <input type="radio" name="pintura" value="0" checked="checked"/>
+            </td>
+          </tr>
+         </tbody>
+       </table>
+      </div>
   </div>
-</div>
-
-
-    <div class="form-group">
-      <label class="control-label col-xs-3">Arreglos a realizar:</label>
-        <div class="col-xs-6">
-              <label class="checkbox-inline">
-                <input type="checkbox" id="arreglo" name="arreglos"> Techo</input>
-              </label>
-              <label class="checkbox-inline">
-                <input type="checkbox" id="arreglo" name="arreglos"> Frente</input>
-              </label>
-              <label class="checkbox-inline">
-                <input type="checkbox" id="arreglo" name="arreglos"> Laterales</input>
-              </label>
-              <label class="checkbox-inline">
-                <input type="checkbox" id="arreglo" name="arreglos"> Pisos</input>
-              </label>
-              <label class="checkbox-inline">
-                <input type="checkbox" id="arreglo" name="arreglos"> Guardabarros</input>
-              </label>
-              <label class="checkbox-inline">
-                <input type="checkbox" id="arreglo" name="arreglos"> Cerraduras</input>
-              </label>
-              <label class="checkbox-inline">
-                <input type="checkbox" id="arreglo" name="arreglos"> Chasis</input>
-              </label>
-              <label class="checkbox-inline">
-                <input type="checkbox" id="arreglo" name="arreglos"> Otros</input>
-              </label>
-          </div>
-    </div>
-
     <div class="form-group">
         <div class="col-xs-offset-3 col-xs-9">
-            <input type="submit" class="btn btn-primary" value="Enviar"></input>
+            <input type="submit" id='btn_agregarturno' class="btn btn-primary" value="Enviar"></input>
         </div>
     </div>
 </form>
+<div class="turnosadmin">
+
+</div>
