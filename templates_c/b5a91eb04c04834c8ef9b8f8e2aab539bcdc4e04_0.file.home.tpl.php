@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-10-19 19:37:39
-  from "C:\xampp\htdocs\trabajo web\templates\home.tpl" */
+/* Smarty version 3.1.30, created on 2016-10-28 01:10:04
+  from "C:\xampp\htdocs\web\templates\home.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5807af6377f282_49359752',
+  'unifunc' => 'content_5812894ccee816_30543696',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '25f764e5c07b69a7e07b6e588d3203184d4f115e' => 
+    'b5a91eb04c04834c8ef9b8f8e2aab539bcdc4e04' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\trabajo web\\templates\\home.tpl',
-      1 => 1476898654,
+      0 => 'C:\\xampp\\htdocs\\web\\templates\\home.tpl',
+      1 => 1477589420,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:inicio.tpl' => 1,
   ),
 ),false)) {
-function content_5807af6377f282_49359752 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5812894ccee816_30543696 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>

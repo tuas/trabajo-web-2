@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-10-20 00:05:05
-  from "C:\xampp\htdocs\trabajo web\templates\inicio.tpl" */
+/* Smarty version 3.1.30, created on 2016-10-28 01:10:04
+  from "C:\xampp\htdocs\web\templates\inicio.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5807ee11c7f9e5_60137061',
+  'unifunc' => 'content_5812894cd25322_77981687',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '795418593f434da5c08d61e9374359ca04e1d007' => 
+    '5d4850e3c872c4eac7d2c16e5cc576f9b03c13f6' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\trabajo web\\templates\\inicio.tpl',
-      1 => 1476914702,
+      0 => 'C:\\xampp\\htdocs\\web\\templates\\inicio.tpl',
+      1 => 1476932584,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5807ee11c7f9e5_60137061 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5812894cd25322_77981687 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="descripcion">
 <p>Nuestra empresa cuenta con más de 30 años de experiencia y contamos con dos generaciones de chapistas. Somos conocidos en la provincia de Buenos Aires gracias algunas restauraciones de autos antiguos. Nos dedicamos a la reparación y arreglo de todo tipo de vehículo, marca y modelo, estamos especializados en:</p>

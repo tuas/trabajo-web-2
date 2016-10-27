@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-10-19 20:55:05
-  from "C:\xampp\htdocs\trabajo web\templates\turno.tpl" */
+/* Smarty version 3.1.30, created on 2016-10-28 01:10:16
+  from "C:\xampp\htdocs\web\templates\turno.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5807c1896553c3_10695456',
+  'unifunc' => 'content_58128958b919a5_01132052',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'd4a8f709ab9ee06a7bdf7191ef3f9248fbdf0063' => 
+    '3db9f8875425e64a9843fd3c1e79608676d2150a' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\trabajo web\\templates\\turno.tpl',
-      1 => 1476903298,
+      0 => 'C:\\xampp\\htdocs\\web\\templates\\turno.tpl',
+      1 => 1476932584,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5807c1896553c3_10695456 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58128958b919a5_01132052 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="horaturno">
 <h2>Pedidos de turnos</h2>

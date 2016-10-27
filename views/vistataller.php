@@ -6,7 +6,7 @@ class tallerView
 
   function __construct()
   {
-    $this->smarty = new Smarty();
+    $this->smarty = new smarty();
   }
 
   function mostrar($taller){
@@ -15,8 +15,8 @@ class tallerView
   function actualizar($action){
     $this->smarty->display("templates/".$action.".tpl");
   }
-  function verservicios($turno){
-    $this->smarty->assign('turno',$turno);
+  function verservicios($servicios){
+    $this->smarty->assign('servicios',$servicios);
     $this->smarty->display('servicios.tpl');
   }
 }

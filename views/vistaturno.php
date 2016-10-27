@@ -5,10 +5,11 @@ class turnoView{
 
   function __construct()
   {
-    $this->smarty = new Smarty();
+    $this->smarty = new smarty();
   }
 
-  function mostrarhorario($turno,$fecha){
+  function mostrarhorario($turno,$fecha,$servicio){
+    $this->smarty->assign('servicio',$servicio);
     $this->smarty->assign('fecha',$fecha);
     $this->smarty->assign('turno',$turno);
     $this->smarty->display('horaturno.tpl');

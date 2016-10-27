@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-10-20 00:26:25
-  from "C:\xampp\htdocs\trabajo web\templates\login.tpl" */
+/* Smarty version 3.1.30, created on 2016-10-28 01:10:04
+  from "C:\xampp\htdocs\web\templates\login.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5807f311679631_78409439',
+  'unifunc' => 'content_5812894cd0dc17_13509838',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '0436c0cfb34659aad938658384003fb7a52f0a76' => 
+    '4cc85ced0192540a21cd72ce473209412fd224c6' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\trabajo web\\templates\\login.tpl',
-      1 => 1476915944,
+      0 => 'C:\\xampp\\htdocs\\web\\templates\\login.tpl',
+      1 => 1476932584,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5807f311679631_78409439 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5812894cd0dc17_13509838 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <a href="#" id="administrador"><span class="glyphicon glyphicon-user" aria-hidden="true"> Administrador </span> </a>
 <div id='oculto'>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-10-19 10:32:52
-  from "C:\xampp\htdocs\trabajo web\templates\galeria.tpl" */
+/* Smarty version 3.1.30, created on 2016-10-28 01:10:12
+  from "C:\xampp\htdocs\web\templates\galeria.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58072fb4c9a268_55639750',
+  'unifunc' => 'content_58128954cc93a1_55926063',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '29e09d31de4e57f42149f2f262356ab2f03605bb' => 
+    '3aba1b4812b9bfb97f2a554d8c593af753d98591' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\trabajo web\\templates\\galeria.tpl',
-      1 => 1476111090,
+      0 => 'C:\\xampp\\htdocs\\web\\templates\\galeria.tpl',
+      1 => 1476932584,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58072fb4c9a268_55639750 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58128954cc93a1_55926063 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="galeria">
 <h2>Galeria de arreglos realizados</h2>

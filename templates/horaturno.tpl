@@ -20,49 +20,39 @@
        <table class="selecturno">
          <thead>
            <th>Horarios</th>
-           <th>Mecanica</th>
-           <th>Chapa</th>
-           <th>Pintura</th>
+           {foreach from=$servicio key=index item=serv}
+              <th>{$serv['servicio']}</th>
+           {/foreach}
          </thead>
          <tbody>
-           {foreach from=$turno key=index item=horario}
+           <tr>
+             <td>Sin turno</td>
+             {foreach from=$servicio key=vaicio item=serv}
+                <td><input type="radio" name="{$serv['servicio']}" value="0" checked="checked"></td>
+             {/foreach}
+           </tr>
+           {foreach from=$turno key=t item=horario}
               <tr>
                 <td><span>{$horario[0]}</span></td>
-                <td>
-                  {if $horario[1] == 0}
-                  <input type="radio" name="mecanica" value="{$horario[0]}"/>
-                  {else}
-                  <span>Ocupado</span>
-                  {/if}
-                </td>
-                <td>
-                  {if $horario[2] == 0}
-                  <input type="radio" name="chapa" value="{$horario[0]}"/>
-                  {else}
-                  <span>Ocupado</span>
-                  {/if}
-                </td>
-                <td>
-                  {if $horario[3] == 0}
-                  <input type="radio" name="pintura" value="{$horario[0]}"/>
-                  {else}
-                  <span>Ocupado</span>
-                  {/if}
-                </td>
-            </tr>
+                {foreach from=$servicio key=s item=serv}
+                  <td>
+                    {$pertenece = FALSE}
+                    {foreach from=$horario key=h item=instancia}
+                      {if $h != 0 and $pertenece == FALSE}
+                        {if $serv['id_servicio'] == $instancia}
+                          {$pertenece = TRUE}
+                          <span>Ocupado</span>
+                        {/if}
+                      {/if}
+                    {/foreach}
+                    {if $pertenece == FALSE}
+                      <input type="radio" name="{$serv['servicio']}" value="{$horario[0]}">
+                    {/if}
+                  </td>
+
           {/foreach}
-          <tr>
-            <td><span>Sin turno</span></td>
-            <td>
-              <input type="radio" name="mecanica" value="0" checked="checked"/>
-            </td>
-            <td>
-              <input type="radio" name="chapa" value="0" checked="checked"/>
-            </td>
-            <td>
-              <input type="radio" name="pintura" value="0" checked="checked"/>
-            </td>
-          </tr>
+        </tr>
+          {/foreach}
          </tbody>
        </table>
       </div>

@@ -19,7 +19,7 @@ class TurnoController{
   function __construct(){
     $this->modelo = new tallermodelo();
     $this->vista = new turnoView();
-    $this->fecha = new Smarty();
+    $this->fecha = new smarty();
     $this->error = new errorController();
   }
 
@@ -27,7 +27,8 @@ class TurnoController{
     if ($_POST['dia']) {
       $fecha = $_POST['dia'];
       $turno = $this->modelo->getTurnosVacios($fecha);
-      $this->vista->mostrarhorario($turno,$fecha);
+      $servicio = $this->modelo->getServivios();
+      $this->vista->mostrarhorario($turno,$fecha,$servicio);
     }
     else {
       $this->error->falta('el dia');

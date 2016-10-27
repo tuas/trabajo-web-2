@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-10-2016 a las 04:52:11
--- Versión del servidor: 10.1.13-MariaDB
--- Versión de PHP: 5.6.21
+-- Tiempo de generación: 28-10-2016 a las 00:50:37
+-- Versión del servidor: 10.1.16-MariaDB
+-- Versión de PHP: 5.6.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -23,14 +23,23 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `clientes`
+-- Estructura de tabla para la tabla `login`
 --
 
-CREATE TABLE `clientes` (
-  `id_Cliente` int(11) NOT NULL,
-  `nombre` text NOT NULL,
-  `email` text NOT NULL
+CREATE TABLE `login` (
+  `id_login` int(11) NOT NULL,
+  `user` text NOT NULL,
+  `pass` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `login`
+--
+
+INSERT INTO `login` (`id_login`, `user`, `pass`) VALUES
+(1, 'admin', 'admin'),
+(2, 'tomas', 'tomas'),
+(3, '', '');
 
 -- --------------------------------------------------------
 
@@ -39,12 +48,41 @@ CREATE TABLE `clientes` (
 --
 
 CREATE TABLE `recomendados` (
-  `Id_recomendado` int(11) NOT NULL,
+  `id_recomendado` int(11) NOT NULL,
   `Servicio` text NOT NULL,
   `Empresa` text NOT NULL,
   `Ciudad` text NOT NULL,
-  `Direccion` text NOT NULL
+  `Direccion` text NOT NULL,
+  `logo` blob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `recomendados`
+--
+
+INSERT INTO `recomendados` (`id_recomendado`, `Servicio`, `Empresa`, `Ciudad`, `Direccion`, `logo`) VALUES
+(8, 'qqqq', 'qqqqqqq', 'qqqqqq', 'qqqqqqqq', 0x696d616765732f353831323366356138303666635f64657363617267612e6a7067),
+(9, 'qqqqqq', 'qqqqqqqqq', 'qqqqqqqqq', 'qqqqqqqqq', 0x696d616765732f353831323432613663643232345f64657363617267612e6a7067),
+(10, 'qqqqqq', 'qqqqqqqqq', 'qqqqqqqqq', 'qqqqqqqqq', 0x696d616765732f353831323432613664326665355f64657363617267612e6a7067);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `servicios`
+--
+
+CREATE TABLE `servicios` (
+  `id_servicio` int(11) NOT NULL,
+  `servicio` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `servicios`
+--
+
+INSERT INTO `servicios` (`id_servicio`, `servicio`) VALUES
+(3, 'd'),
+(4, 'b');
 
 -- --------------------------------------------------------
 
@@ -53,13 +91,12 @@ CREATE TABLE `recomendados` (
 --
 
 CREATE TABLE `turnos` (
-  `id_Turno` int(11) NOT NULL,
+  `id_turno` int(11) NOT NULL,
   `fecha` date NOT NULL,
   `hora` int(11) NOT NULL,
-  `fk_id_cliente` int(11) NOT NULL,
-  `mecanica` tinyint(1) NOT NULL,
-  `chapa` tinyint(1) NOT NULL,
-  `pintura` tinyint(1) NOT NULL
+  `nombre` text NOT NULL,
+  `email` text NOT NULL,
+  `fk_id_servicio` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -67,58 +104,53 @@ CREATE TABLE `turnos` (
 --
 
 --
--- Indices de la tabla `clientes`
+-- Indices de la tabla `login`
 --
-ALTER TABLE `clientes`
-  ADD PRIMARY KEY (`id_Cliente`);
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`id_login`);
 
 --
 -- Indices de la tabla `recomendados`
 --
 ALTER TABLE `recomendados`
-  ADD PRIMARY KEY (`Id_recomendado`);
+  ADD PRIMARY KEY (`id_recomendado`);
+
+--
+-- Indices de la tabla `servicios`
+--
+ALTER TABLE `servicios`
+  ADD PRIMARY KEY (`id_servicio`);
 
 --
 -- Indices de la tabla `turnos`
 --
 ALTER TABLE `turnos`
-  ADD PRIMARY KEY (`id_Turno`,`fk_id_cliente`);
+  ADD PRIMARY KEY (`id_turno`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT de la tabla `clientes`
+-- AUTO_INCREMENT de la tabla `login`
 --
-ALTER TABLE `clientes`
-  MODIFY `id_Cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+ALTER TABLE `login`
+  MODIFY `id_login` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `recomendados`
 --
 ALTER TABLE `recomendados`
-  MODIFY `Id_recomendado` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_recomendado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+--
+-- AUTO_INCREMENT de la tabla `servicios`
+--
+ALTER TABLE `servicios`
+  MODIFY `id_servicio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `turnos`
 --
 ALTER TABLE `turnos`
-  MODIFY `id_Turno` int(11) NOT NULL AUTO_INCREMENT;
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `clientes`
---
-ALTER TABLE `clientes`
-  ADD CONSTRAINT `clientes_ibfk_1` FOREIGN KEY (`id_Cliente`) REFERENCES `turnos` (`id_Turno`);
-
---
--- Filtros para la tabla `turnos`
---
-ALTER TABLE `turnos`
-  ADD CONSTRAINT `turnos_ibfk_1` FOREIGN KEY (`id_Turno`) REFERENCES `clientes` (`id_Cliente`) ON DELETE CASCADE;
-
+  MODIFY `id_turno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
