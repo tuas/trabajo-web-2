@@ -116,12 +116,7 @@ function mostrar_form_edit_r($action){
 function edicion_tabla_recomendado(){
   if ($_POST) {
   $recomendado = $_POST;
-  if(isset($_FILES['imagenes'])){
-    $imagenesVerificadas = $this->getImagenesVerificadas($_FILES['imagenes']);
-    if(count($imagenesVerificadas)>0){
-        $this->admini->editrecomendadodb($recomendado,$imagenesVerificadas);
-      }
-    }
+  $this->admini->editrecomendadodb($recomendado,$this->getImagenesVerificadas($_FILES['imagenes']));
   }
   $this->loading();
 }

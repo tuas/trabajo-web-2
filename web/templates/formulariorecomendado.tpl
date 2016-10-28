@@ -31,7 +31,7 @@
           </div>
           <div class="form-group">
             <div class="col-xs-offset-3 col-xs-9">
-                <input type="submit" id="btn_agregarrecomendadotabla"  value="Agregar"></input>
+                <input type="submit" id="btn_agregarrecomendadotabla" class="btn btn-primary" value="Agregar"></input>
             </div>
         </div>
 

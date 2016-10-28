@@ -20,7 +20,7 @@ class ConfigApp{
   public static $ACTION_ELIMINAR_TABLA_SERVICIO = 'eliminar_tablaservicio';
   public static $ACTION_FORMEDIT_TABLA_RECOMENDADO = 'form_tablarecomendado';
   public static $ACTION_EDIT_TABLA_RECOMENDADO = 'editar_tablarecomendado';
-  public static $ACTION_FORMADD_TABLA_RECOMENDADO = 'form_agregarerecomendado';
+  public static $ACTION_FORMADD_TABLA_RECOMENDADO = 'form_agregarrecomendado';
   public static $ACTION_ADD_TABLA_RECOMENDADO = 'agregarenrecomendado';
   public static $ACTION_ELIMINAR_TABLA_RECOMENDADO = 'eliminar_tablarecomendado';
 }

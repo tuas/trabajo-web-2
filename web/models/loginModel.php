@@ -111,13 +111,9 @@ class loginmodelo{
        $empresa = $recomendado['empresa'];
        $ciudad = $recomendado['ciudad'];
        $direccion = $recomendado['direccion'];
-       if (count($imagenes)>0) {
-         $path="images/".uniqid()."_".$imagenes["name"];
-         move_uploaded_file($imagenes["tmp_name"], $path);
-
-       }
-       else {
-         $logo ='';
+       foreach ($imagenes as $imagen) {
+         $path="images/".uniqid()."_".$imagen['name'];
+         move_uploaded_file($imagen['tmp_name'], $path);
        }
        $sentencia = $this->db->prepare("UPDATE recomendados SET servicio=?, empresa=?, ciudad=?, direccion=?, logo=? WHERE id_recomendado=?");
        $sentencia->execute(array($servicio,$empresa,$ciudad,$direccion,$path,$id));

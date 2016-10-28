@@ -16,7 +16,7 @@ if (!array_key_exists(ConfigApp::$ACTION,$_REQUEST)){
 }
 
 
-
+print_r($_GET);
 switch ($_REQUEST[ConfigApp::$ACTION]) {
     case ConfigApp::$ADMINISTRADOR:
       $logincontroller->checklogin();

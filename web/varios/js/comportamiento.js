@@ -166,10 +166,32 @@ var   eliminartablarecomendado= function(){
 
 var etablarecomendado = function(){
  event.preventDefault();
- $.post( "index.php?action=form_tablarecomendado",{ id_recomendado: $(formularioeditarrecomendadotabla).attr("data-idrecomendados") }, function(data) {
-   $('#modificacionrecomendados').html(data);
+   var id = $("#id_recomendado").val();
+   var servicio = $("#servicio").val();
+   var empresa = $('#empresa').val();
+   var ciudad = $("#ciudad").val();
+   var direccion = $('#direccion').val();
+   var datos = new FormData();
+   if(typeof imagen !== "undefined") {
+     $.each(imagen, function(key, value)
+     {
+       datos.append(key, value);
+     });
+   }
+   datos.append('servicio',servicio);
+   datos.append('empresa',empresa);
+   datos.append('ciudad',ciudad);
+   datos.append('direccion',direccion);
+ $.ajax({
+    url: 'index.php?action=form_tablarecomendado',
+    processData: false,
+    contentType: false,
+    type: 'POST',
+    success: function(data){
+      $(".contenido").html(data);
+    }
  });
-}
+ };
 
 
 var editartablarecomendado = function() {
@@ -185,7 +207,7 @@ var editartablarecomendado = function() {
 var atablarecomendado = function(){
 $.ajax({
   url:"index.php?action=form_agregarrecomendado",
-  method:"GET",
+  method:"POST",
   dataType:"html",
   success: function(textoCargado, status){
     $("#modificacionrecomendados").html(textoCargado);
@@ -195,10 +217,26 @@ $.ajax({
 
 var agregartablarecomendado = function(){
   event.preventDefault();
-    var formData = new FormData(this);
+    var servicio = $("#servicio").val();
+    var empresa = $('#empresa').val();
+    var ciudad = $("#ciudad").val();
+    var direccion = $('#direccion').val();
+    var datos = new FormData();
+    if(typeof imagen !== "undefined") {
+      $.each(imagen, function(key, value)
+      {
+        datos.append(key, value);
+      });
+    }
+    else {
+      datos.append(logo,'');
+    }
+    datos.append('servicio',servicio);
+    datos.append('empresa',empresa);
+    datos.append('ciudad',ciudad);
+    datos.append('direccion',direccion);
   $.ajax({
      url: 'index.php?action=agregarenrecomendado',
-     data: formData,
      processData: false,
      contentType: false,
      type: 'POST',
@@ -286,7 +324,7 @@ $(document).on("click", "#formulariorecomendadotabla", function(){
   atablarecomendado();
 });
 
-$(document).on("submit","#btn_agregarrecomendadotabla", function(){
+$(document).on("click","#btn_agregarrecomendadotabla", function(){
   agregartablarecomendado();
 });
 
